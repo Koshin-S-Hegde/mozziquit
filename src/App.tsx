@@ -1,17 +1,23 @@
-import React from "react"
-import "./index.css"
+// import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Product from './pages/Product';
+import Awards from './pages/Awards';
+import About from './pages/About'; // Assuming Contacts is in About for now
+import Navbar from './pages/Navbar';
 
+const App = () => {
+  return (
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Product />} />
+        <Route path="/awards" element={<Awards />} />
+        <Route path="/contacts" element={<About />} />
+      </Routes>
+    </div>
+  );
+};
 
-class App extends React.Component {
-    render = () => {
-        return (
-            <>
-            <h1 className="text-9xl font-bold underline bg-red-800">
-             Hello world!
-            </h1>
-            </>
-        )
-    }
-}
-
-export default App
+export default App;

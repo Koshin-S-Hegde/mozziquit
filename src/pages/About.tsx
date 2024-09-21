@@ -1,4 +1,4 @@
-import React from 'react';
+//  
 import location from '../resources/location.jpg';
 
 const About = () => {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../resources/logo.png'; // Import your logo
 
@@ -50,7 +50,9 @@ const Navbar = () => {
           <Link to="/about" className="block text-gray-700 hover:text-yellow-600 py-2">About Us</Link>
         </div>
       )}
+      <div className="bg-gray-800 p-7 w-full top-0" />
     </div>
+
   );
 };
 

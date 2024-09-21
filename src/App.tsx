@@ -5,6 +5,7 @@ import Product from './pages/Product';
 import Awards from './pages/Awards';
 import About from './pages/About'; 
 import Navbar from './pages/Navbar';
+import Footer from './pages/Footer';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/awards" element={<Awards />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      <Footer />
     </div>
   );
 };

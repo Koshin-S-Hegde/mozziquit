@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../resources/logo.png'; // Import your logo
 
 const Navbar = () => {
   // State to toggle mobile menu
@@ -12,19 +13,21 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="bg-gray-800 p-4 fixed w-full top-0 z-10">
+      <nav className="bg-white backdrop-blur-lg p-4 fixed w-full top-0 z-10">
         <div className="container mx-auto flex justify-between items-center">
           {/* Left: Logo */}
           <div className="text-white font-bold text-xl">
-            <Link to="/">MozziQuit</Link>
+          <Link to="/" className="text-gray-700 font-bold text-xl">
+              <img src={logo} alt="MozziQuit Logo" className="h-11 mr-4" /> {/* Use your imported logo */}
+            </Link>
           </div>
 
           {/* Right: Nav Links (Desktop) */}
           <div className="hidden md:flex space-x-4">
-            <Link to="/" className="text-white hover:text-gray-300">Home</Link>
-            <Link to="/products" className="text-white hover:text-gray-300">Products</Link>
-            <Link to="/awards" className="text-white hover:text-gray-300">Awards</Link>
-            <Link to="/about" className="text-white hover:text-gray-300">About Us</Link>
+            <Link to="/" className="text-gray-700 hover:text-yellow-600">Home</Link>
+            <Link to="/products" className="text-gray-700 hover:text-yellow-600">Products</Link>
+            <Link to="/awards" className="text-gray-700 hover:text-yellow-600">Awards</Link>
+            <Link to="/about" className="text-gray-700 hover:text-yellow-600">About Us</Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -41,10 +44,10 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-gray-800 p-4">
-          <Link to="/" className="block text-white hover:text-gray-300 py-2">Home</Link>
-          <Link to="/products" className="block text-white hover:text-gray-300 py-2">Products</Link>
-          <Link to="/awards" className="block text-white hover:text-gray-300 py-2">Awards</Link>
-          <Link to="/about" className="block text-white hover:text-gray-300 py-2">Contacts</Link>
+          <Link to="/" className="block text-gray-700 hover:text-yellow-600 py-2">Home</Link>
+          <Link to="/products" className="block text-gray-700 hover:text-yellow-600 py-2">Products</Link>
+          <Link to="/awards" className="block text-gray-700 hover:text-yellow-600 py-2">Awards</Link>
+          <Link to="/about" className="block text-gray-700 hover:text-yellow-600 py-2">About Us</Link>
         </div>
       )}
     </div>

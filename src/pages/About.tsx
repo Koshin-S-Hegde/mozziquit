@@ -25,12 +25,11 @@ const About = () => {
               Opposite Infosys and Dakshina Kannada<br />
               Panchayat Name Board, Kottara,<br />
               Ashoknagar Post, Mangalore - 575006,<br />
-              Karnataka, India<br />
+              Karnataka, India<br />  <br />
 
               For inquiries, please reach out to us at:<br />
-              Email: info@mozzquit.com<br />
-              Phone: +123 456 7890<br />
-              Address: 123 MozziQuit Lane, Mosquitoville, ST 12345
+              Email: orwinnoronha@gmail.com<br />
+              Phone: +91 9886675656<br />
             </p>
           </div>
         </div>

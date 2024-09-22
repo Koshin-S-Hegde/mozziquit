@@ -3,7 +3,7 @@ import location from '../resources/location.jpg';
 
 const About = () => {
   return (
-    <div className="bg-gray-100 min-h-screen flex items-start mt-10">
+    <div className="bg-gray-100 min-h-screen flex items-start ">
       <div className="container mx-auto px-4 py-12 flex flex-col md:flex-row">
         {/* Left Side: Text Sections */}
         <div className="flex flex-col justify-start space-y-8 w-full md:w-2/5 xs:mt-5 sm:mt-8 md:mt-0">

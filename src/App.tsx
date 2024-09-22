@@ -15,7 +15,7 @@ return (
     <div className='relative'>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/product" element={<Product />} />
+        {/* <Route path="/product" element={<Product />} /> */}
         <Route path="/awards" element={<Awards />} />
         <Route path="/about" element={<About />} />
       </Routes>

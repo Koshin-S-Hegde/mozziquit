@@ -24,12 +24,12 @@ const Navbar = () => {
 
           {/* Right: Nav Links (Desktop) */}
           <div className="hidden md:flex space-x-4">
-            <Link to="/" className="text-white hover:text-yellow-200 hover:relative hover:bottom-1">
+            <Link to="/" className="text-white hover:text-yellow-200 ">
               Home
             </Link>
-            <Link to="/products" className="text-white hover:text-yellow-200 hover:relative hover:bottom-1">Products</Link>
-            <a href="/awards" className="text-white hover:text-yellow-200 hover:relative hover:bottom-1">Awards</a>
-            <Link to="/about" className="text-white hover:text-yellow-200 hover:relative hover:bottom-1">About Us</Link>
+            {/* <Link to="/products" className="text-white hover:text-yellow-200 ">Products</Link> */}
+            <a href="/awards" className="text-white hover:text-yellow-200 ">Awards</a>
+            <Link to="/about" className="text-white hover:text-yellow-200 ">About Us</Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -48,7 +48,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-gray-800 p-4">
           <Link to="/" className="block text-white hover:text-yellow-200 py-2">Home</Link>
-          <Link to="/products" className="block text-white hover:text-yellow-200 py-2">Products</Link>
+          {/* <Link to="/products" className="block text-white hover:text-yellow-200 py-2">Products</Link> */}
           <Link to="/awards" className="block text-white hover:text-yellow-200 py-2">Awards</Link>
           <Link to="/about" className="block text-white hover:text-yellow-200 py-2">About Us</Link>
         </div>

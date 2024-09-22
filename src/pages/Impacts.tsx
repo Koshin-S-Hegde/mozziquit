@@ -34,7 +34,7 @@ class ImpactsRenderer extends React.Component {
     return (
       <div>
         <div className="text-center text-4xl my-5 font-bold underline hover:text-[#511]">Impacts</div>
-        <div className="flex justify-around flex-wrap mb-5">
+        <div className="flex justify-around flex-wrap mb-5 2xl:mx-32">
           {impactPairs.map(impactPair => {
             return (
               <div className="flex justify-around grow basis-1 flex-wrap">

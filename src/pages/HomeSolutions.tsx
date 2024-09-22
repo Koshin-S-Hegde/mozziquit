@@ -34,7 +34,7 @@ const impactPairs: Impact[][] = [
 class Solutions extends React.Component {
   render = () => {
     return (
-      <div className="mt-10 block lg:mb-96 xl:mb-10">
+      <div className="mt-10 block lg:mb-96 xl:mb-10 relative">
         <div className="flex justify-between mb-5 flex-col h-fit lg:h-[85vh]">
           {impactPairs.map((impactPair, index) => {
             return (
@@ -53,7 +53,7 @@ class Solutions extends React.Component {
                     )
                   })}
                 </div>
-                {!index && <img src={HomeImage} className="h-64 w-64 self-center xl:absolute top-[40vh]" />}
+                {!index && <img src={HomeImage} className="h-64 w-64 self-center xl:absolute top-[30vh]" />}
               </>
             )
           })}

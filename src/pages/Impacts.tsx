@@ -34,14 +34,15 @@ class ImpactsRenderer extends React.Component {
     return (
       <div>
         <div className="text-center text-4xl my-5 font-bold underline hover:text-[#511]">Impacts</div>
-        <div className="flex justify-around flex-wrap mb-5 2xl:mx-32">
+        <div className="flex justify-around flex-wrap mb-5 2xl:mx-56">
           {impactPairs.map(impactPair => {
             return (
               <div className="flex justify-around grow basis-1 flex-wrap">
                 {impactPair.map(impact => {
                   return (
-                    <div className="min-w-64 max-w-72 grow basis-1 border-2 border-dashed border-black p-5 rounded-3xl m-5 flex flex-col justify-around hover:shadow-lg hover:shadow-gray-700 hover:relative hover:bottom-1 hover:bg-white">
-                      <div className="font-bold text-2xl text-center text-[#511]">
+                    <div 
+                    className="min-w-64 max-w-72 grow basis-1 bg-white border-2 border-dashed border-gray-400 p-5 rounded-3xl m-5 flex flex-col justify-around transition-transform duration-300 ease-in-out hover:shadow-lg hover:shadow-gray-400 hover:relative hover:bottom-1 hover:bg-white">
+                    <div className="font-bold text-2xl text-center text-[#511]">
                         {impact.title}
                       </div>
                       <div className="text-lg">

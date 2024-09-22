@@ -17,13 +17,13 @@ class Home extends React.Component {
          <div className="h-fit sm:h-[50em]">
            <Carousel>
              <img src={banner} alt="Award 1" className="block w-full h-full  object-cover" />
-             <img src={banner} alt="Award 1" className="block w-full h-full object-cover" />
+             {/* <img src={banner} alt="Award 1" className="block w-full h-full object-cover" /> */}
            </Carousel>
          </div>
        </div>
-       <Solutions />
        <InspiringChange />	
        <Impacts />
+       <Solutions />
      </>
   );
  };

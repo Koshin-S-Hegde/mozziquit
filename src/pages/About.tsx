@@ -39,8 +39,6 @@ const About = () => {
             <div className="bg-white shadow-md rounded-xl p-6 max-w-2xl w-full">
               <h2 className="text-2xl font-semibold mb-4">For Inquiries</h2>
               <p className="text-gray-700">
-                
-
                 For inquiries, please reach out to us at:<br />
                 Email: orwinnoronha@gmail.com<br />
                 Phone: +91 9886675656<br />

@@ -1,6 +1,6 @@
 "use client";
 
-import { Carousel } from "flowbite-react";
+// import { Carousel } from "flowbite-react";
 
 import React from "react";
 import InspiringChange from "./InspiringChange"

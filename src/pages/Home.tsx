@@ -8,7 +8,6 @@ import Impacts from "./Impacts"
 import banner from '../resources/banner.png';
 
 
-
 class Home extends React.Component {
     render = () => {
         return (

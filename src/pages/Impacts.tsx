@@ -33,7 +33,7 @@ class ImpactsRenderer extends React.Component {
   render = () => {
     return (
       <div>
-        <div className="text-center text-4xl my-5 font-bold underline">Impacts</div>
+        <div className="text-center text-4xl my-5 font-bold underline hover:text-[#511]">Impacts</div>
         <div className="flex justify-around flex-wrap mb-5">
           {impactPairs.map(impactPair => {
             return (

@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="bg-white backdrop-blur-lg p-4 fixed w-full top-0 z-10">
+      <nav className="bg-black backdrop-blur-lg p-4 fixed w-full top-0 z-50">
         <div className="container mx-auto flex justify-between items-center">
           {/* Left: Logo */}
           <div className="text-white font-bold text-xl">
@@ -24,10 +24,12 @@ const Navbar = () => {
 
           {/* Right: Nav Links (Desktop) */}
           <div className="hidden md:flex space-x-4">
-            <Link to="/" className="text-gray-700 hover:text-yellow-600">Home</Link>
-            <Link to="/products" className="text-gray-700 hover:text-yellow-600">Products</Link>
-            <a href="/awards" className="text-gray-700 hover:text-yellow-600">Awards</a>
-            <Link to="/about" className="text-gray-700 hover:text-yellow-600">About Us</Link>
+            <Link to="/" className="text-white hover:text-yellow-200 hover:relative hover:bottom-1">
+              Home
+            </Link>
+            <Link to="/products" className="text-white hover:text-yellow-200 hover:relative hover:bottom-1">Products</Link>
+            <a href="/awards" className="text-white hover:text-yellow-200 hover:relative hover:bottom-1">Awards</a>
+            <Link to="/about" className="text-white hover:text-yellow-200 hover:relative hover:bottom-1">About Us</Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -41,16 +43,16 @@ const Navbar = () => {
         </div>
       </nav>
 
+      <div className="bg-gray-800 p-7 w-full top-0" />
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-gray-800 p-4">
-          <Link to="/" className="block text-gray-700 hover:text-yellow-600 py-2">Home</Link>
-          <Link to="/products" className="block text-gray-700 hover:text-yellow-600 py-2">Products</Link>
-          <Link to="/awards" className="block text-gray-700 hover:text-yellow-600 py-2">Awards</Link>
-          <Link to="/about" className="block text-gray-700 hover:text-yellow-600 py-2">About Us</Link>
+          <Link to="/" className="block text-white hover:text-yellow-200 py-2">Home</Link>
+          <Link to="/products" className="block text-white hover:text-yellow-200 py-2">Products</Link>
+          <Link to="/awards" className="block text-white hover:text-yellow-200 py-2">Awards</Link>
+          <Link to="/about" className="block text-white hover:text-yellow-200 py-2">About Us</Link>
         </div>
       )}
-      <div className="bg-gray-800 p-7 w-full top-0" />
     </div>
 
   );

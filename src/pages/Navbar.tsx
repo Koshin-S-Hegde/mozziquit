@@ -12,8 +12,8 @@ const Navbar = () => {
   };
 
   return (
-    <div>
-      <nav className="bg-black backdrop-blur-lg p-4 fixed w-full top-0 z-50">
+    <div className="fixed top-0 z-50 w-full">
+      <nav className="bg-black backdrop-blur-lg p-4 w-full">
         <div className="container mx-auto flex justify-between items-center">
           {/* Left: Logo */}
           <div className="text-white font-bold text-xl">
@@ -27,8 +27,7 @@ const Navbar = () => {
             <Link to="/" className="text-white hover:text-yellow-200 ">
               Home
             </Link>
-            <Link to="/awards" className="text-white hover:text-yellow-200 ">Awards</Link>
-            {/* <a href="/awards" className="text-white hover:text-yellow-200 ">Awards</a> */}
+            <a href="/awards" className="text-white hover:text-yellow-200 ">Awards</a>
             <Link to="/about" className="text-white hover:text-yellow-200 ">About Us</Link>
           </div>
 
@@ -43,12 +42,10 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <div className="bg-gray-800 p-7 w-full top-0" />
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-gray-800 p-4">
           <Link to="/" className="block text-white hover:text-yellow-200 py-2">Home</Link>
-          {/* <Link to="/products" className="block text-white hover:text-yellow-200 py-2">Products</Link> */}
           <Link to="/awards" className="block text-white hover:text-yellow-200 py-2">Awards</Link>
           <Link to="/about" className="block text-white hover:text-yellow-200 py-2">About Us</Link>
         </div>

@@ -41,9 +41,6 @@ const Footer = () => {
             <li>
               <Link to="/awards" className="cursor-pointer hover:underline">Awards</Link>
             </li>
-            <li>
-              <Link to="/product" className="cursor-pointer hover:underline">Product</Link>
-            </li>
           </ul>
         </div>
       </div>

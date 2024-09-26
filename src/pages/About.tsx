@@ -62,7 +62,7 @@ const About = () => {
             imgSrc={partner1}
           >
             <h5 className="text-2xl font-bold tracking-tight text-center text-gray-900 dark:text-white">
-            Velagaleti Janaki Venkata Ramana 
+            Ignatius Orwin Noronha
             </h5>
             
           </Card>
@@ -72,7 +72,7 @@ const About = () => {
             imgSrc={partner}
           >
             <h5 className="text-2xl font-bold tracking-tight text-center text-gray-900 dark:text-white">
-            Ignatius Orwin Noronha
+            Velagaleti Janaki Venkata Ramana 
             </h5>
             
           </Card>

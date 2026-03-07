@@ -31,7 +31,9 @@ const About = () => {
             <span className="eyebrow-dot" />
             Company profile
           </div>
-          <h1 className="section-title max-w-3xl text-5xl sm:text-6xl">A public health product company with a clearer point of view.</h1>
+          <h1 className="section-title max-w-3xl text-5xl sm:text-6xl">
+            A public health product company with a clearer point of view.
+          </h1>
           <p className="max-w-2xl text-base leading-8 text-[var(--muted)] sm:text-lg">
             MozziQuit exists to reduce mosquito-borne disease risk using engineered traps that are safe, practical, and
             easier to deploy in real living environments.
@@ -39,11 +41,15 @@ const About = () => {
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="glass-card rounded-[28px] p-6">
               <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--brand)]">Vision</p>
-              <p className="mt-3 text-xl leading-8">A world where mosquito control is effective without harming people or ecosystems.</p>
+              <p className="mt-3 text-xl leading-8">
+                A world where mosquito control is effective without harming people or ecosystems.
+              </p>
             </div>
             <div className="rounded-[28px] bg-[var(--accent-soft)] p-6">
               <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#7d5d18]">Mission</p>
-              <p className="mt-3 text-xl leading-8 text-[#4a3a10]">Scale sustainable mosquito management through patented product design.</p>
+              <p className="mt-3 text-xl leading-8 text-[#4a3a10]">
+                Scale sustainable mosquito management through patented product design.
+              </p>
             </div>
           </div>
         </div>
@@ -113,31 +119,6 @@ const About = () => {
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-=======
-          <div className="bg-[#ffffff] p-4 mb-0">
-        <div className="flex-row justify-around ">
-          <Card
-            className="max-w-sm mb-4"
-            imgAlt="Meaningful alt text for an image that is not purely decorative"
-            imgSrc={partner1}
-          >
-            <h5 className="text-2xl font-bold tracking-tight text-center text-gray-900 dark:text-white">
-            Ignatius Orwin Noronha
-            </h5>
-            
-          </Card>
-          <Card
-            className="max-w-sm"
-            imgAlt="Meaningful alt text for an image that is not purely decorative"
-            imgSrc={partner}
-          >
-            <h5 className="text-2xl font-bold tracking-tight text-center text-gray-900 dark:text-white">
-            Velagaleti Janaki Venkata Ramana 
-            </h5>
-            
-          </Card>
->>>>>>> 8fb4dcd3cda702292f7ee29be682452d13cc2ca0
         </div>
       </section>
     </div>

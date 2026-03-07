@@ -1,8 +1,8 @@
 import React from "react";
 
 interface Impact {
-  title: String;
-  description: String;
+  title: string;
+  description: string;
 }
 
 const impactPairs: Impact[][] = [

@@ -10,7 +10,6 @@ const metrics = [
   { value: '2010+', label: 'recognized innovation track record' },
 ];
 
-<<<<<<< HEAD
 const problems = [
   'Mosquito-borne disease still drives major health and economic loss.',
   'Common repellents rely on repeat purchase cycles and chemical exposure.',
@@ -106,7 +105,9 @@ const Home = () => {
             <span className="eyebrow-dot" />
             The challenge
           </div>
-          <h2 className="section-title max-w-xl text-white">Conventional mosquito protection still leaves critical gaps.</h2>
+          <h2 className="section-title max-w-xl text-white">
+            Conventional mosquito protection still leaves critical gaps.
+          </h2>
           <div className="mt-8 grid gap-4">
             {problems.map((item) => (
               <div key={item} className="rounded-[24px] border border-white/10 bg-white/5 p-5 text-white/80">
@@ -121,7 +122,9 @@ const Home = () => {
             <span className="eyebrow-dot" />
             What MozziQuit does
           </div>
-          <h2 className="section-title max-w-2xl">A more thoughtful product system for homes, campuses, and hospitality spaces.</h2>
+          <h2 className="section-title max-w-2xl">
+            A more thoughtful product system for homes, campuses, and hospitality spaces.
+          </h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {differentiators.map((item) => (
               <article key={item.title} className="rounded-[26px] bg-white/70 p-5">
@@ -135,7 +138,11 @@ const Home = () => {
 
       <section className="shell mt-20 grid gap-6 lg:grid-cols-[1fr_0.95fr]">
         <div className="glass-card rounded-[32px] p-4 sm:p-5">
-          <img src={traction} alt="MozziQuit traction" className="h-full min-h-[360px] w-full rounded-[28px] object-cover" />
+          <img
+            src={traction}
+            alt="MozziQuit traction"
+            className="h-full min-h-[360px] w-full rounded-[28px] object-cover"
+          />
         </div>
         <div className="flex flex-col gap-6">
           <div className="glass-card rounded-[32px] p-8">
@@ -143,10 +150,15 @@ const Home = () => {
               <span className="eyebrow-dot" />
               Application fit
             </div>
-            <h2 className="section-title">Built to look at home in modern spaces, not just industrial contexts.</h2>
+            <h2 className="section-title">
+              Built to look at home in modern spaces, not just industrial contexts.
+            </h2>
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               {applications.map((item) => (
-                <div key={item} className="rounded-[22px] border border-[var(--line)] bg-white/80 px-4 py-4 text-sm font-semibold">
+                <div
+                  key={item}
+                  className="rounded-[22px] border border-[var(--line)] bg-white/80 px-4 py-4 text-sm font-semibold"
+                >
                   {item}
                 </div>
               ))}
@@ -155,10 +167,16 @@ const Home = () => {
           <div className="grid gap-6 sm:grid-cols-[1.1fr_0.9fr]">
             <div className="rounded-[32px] bg-[var(--accent-soft)] p-8 text-[#4a3a10]">
               <p className="text-sm font-semibold uppercase tracking-[0.28em]">Mission</p>
-              <p className="mt-4 text-2xl leading-9">Make mosquito control safer, quieter, and more sustainable.</p>
+              <p className="mt-4 text-2xl leading-9">
+                Make mosquito control safer, quieter, and more sustainable.
+              </p>
             </div>
             <div className="glass-card rounded-[32px] p-4">
-              <img src={product} alt="MozziQuit product" className="h-full min-h-[220px] w-full rounded-[24px] object-cover" />
+              <img
+                src={product}
+                alt="MozziQuit product"
+                className="h-full min-h-[220px] w-full rounded-[24px] object-cover"
+              />
             </div>
           </div>
         </div>
@@ -193,39 +211,16 @@ const Home = () => {
           </div>
           <div className="relative">
             <div className="absolute -left-10 top-1/2 hidden h-40 w-40 -translate-y-1/2 rounded-full bg-[var(--brand)]/10 blur-3xl lg:block" />
-            <img src={productAlt} alt="MozziQuit showcase" className="h-full min-h-[340px] w-full rounded-[30px] object-cover" />
+            <img
+              src={productAlt}
+              alt="MozziQuit showcase"
+              className="h-full min-h-[340px] w-full rounded-[30px] object-cover"
+            />
           </div>
         </div>
       </section>
     </div>
   );
 };
-=======
-class Home extends React.Component {
-  render = () => {
-   return (
-      <>
-        <div className="h-fit mt-0 mb-0">
-          <div className="h-fit sm:h-[50em]">
-              <img src={banner} alt="Award 1" className="block w-full h-full  object-cover" />
-          </div>
-        </div>
-        <div className="text-center text-4xl my-5 font-bold underline hover:text-[#511]">
-          Our product
-        </div>
-        <div className="flex justify-evenly">
-          <img className="w-1/6" src="/product-left.png" />
-          <img className="w-1/6" src="/product-center.jpg" />
-          <img className="w-1/6" src="/product-right.png" />
-        </div>
-        <InspiringChange />	
-        <Impacts />
-        <Solutions />
-      </>
-   );
-  };
-}
-
->>>>>>> 8fb4dcd3cda702292f7ee29be682452d13cc2ca0
 
 export default Home;

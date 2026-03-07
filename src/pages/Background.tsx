@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import type { Container } from "@tsparticles/engine";
-import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
+import { loadFull } from "tsparticles";
 
 const Background = () => {
   const [init, setInit] = useState(false);
@@ -13,12 +12,8 @@ const Background = () => {
     });
   }, []);
 
-  const particlesLoaded = (_?: Container) => {
-      return new Promise<void>(() => {})
-  };
-
   if (init) {
-    return <Particles id="tsparticles" url="/Background.json" particlesLoaded={particlesLoaded} className="-z-10" />;
+    return <Particles id="tsparticles" url="/Background.json" className="-z-10" />;
   }
 
   return <></>;

@@ -1,60 +1,105 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../resources/logo.png'; // Import your logo
+import { Link, NavLink } from 'react-router-dom';
+import logo from '../resources/logo.png';
+
+const links = [
+  { to: '/', label: 'Home' },
+  { to: '/awards', label: 'Awards' },
+  { to: '/about', label: 'About' },
+];
 
 const Navbar = () => {
-  // State to toggle mobile menu
   const [isOpen, setIsOpen] = useState(false);
 
-  // Function to toggle mobile menu
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <div>
-      <nav className="bg-black backdrop-blur-lg p-4 fixed w-full top-0 z-50">
-        <div className="container mx-auto flex justify-between items-center">
-          {/* Left: Logo */}
-          <div className="text-white font-bold text-xl">
-          <Link to="/" className="text-gray-700 font-bold text-xl">
-              <img src={logo} alt="MozziQuit Logo" className="h-11 mr-4" /> {/* Use your imported logo */}
+    <header className="fixed inset-x-0 top-0 z-50">
+      <div className="shell pt-4">
+        <nav className="glass-card rounded-[28px] px-4 py-3 sm:px-6">
+          <div className="flex items-center justify-between gap-4">
+            <Link to="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
+              <div className="rounded-2xl bg-white/85 p-2 shadow-sm">
+                <img src={logo} alt="MozziQuit" className="h-10 w-auto sm:h-12" />
+              </div>
+              <div className="hidden sm:block">
+                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--brand)]">
+                  MozziQuit
+                </p>
+                <p className="text-sm text-[var(--muted)]">Mosquito control, redesigned for modern spaces</p>
+              </div>
             </Link>
-          </div>
 
-          {/* Right: Nav Links (Desktop) */}
-          <div className="hidden md:flex space-x-4">
-            <Link to="/" className="text-white hover:text-yellow-200 ">
-              Home
-            </Link>
-            <Link to="/awards" className="text-white hover:text-yellow-200 ">Awards</Link>
-            {/* <a href="/awards" className="text-white hover:text-yellow-200 ">Awards</a> */}
-            <Link to="/about" className="text-white hover:text-yellow-200 ">About Us</Link>
-          </div>
+            <div className="hidden items-center gap-2 md:flex">
+              {links.map((link) => (
+                <NavLink
+                  key={link.to}
+                  to={link.to}
+                  className={({ isActive }) =>
+                    [
+                      'rounded-full px-4 py-2 text-sm font-semibold transition',
+                      isActive
+                        ? 'bg-[var(--brand-strong)] text-white'
+                        : 'text-[var(--text)] hover:bg-white/70',
+                    ].join(' ')
+                  }
+                >
+                  {link.label}
+                </NavLink>
+              ))}
+              <a
+                href="mailto:orwinnoronha@gmail.com"
+                className="rounded-full bg-[var(--accent)] px-4 py-2 text-sm font-semibold text-[#3b2b09] transition hover:translate-y-[-1px]"
+              >
+                Contact
+              </a>
+            </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-white focus:outline-none">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            <button
+              type="button"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[var(--brand-strong)] text-white md:hidden"
+              onClick={() => setIsOpen((open) => !open)}
+              aria-label="Toggle navigation"
+              aria-expanded={isOpen}
+            >
+              <svg viewBox="0 0 24 24" className="h-5 w-5 fill-none stroke-current stroke-2">
+                {isOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 6l12 12M18 6L6 18" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 7h16M4 12h16M10 17h10" />
+                )}
               </svg>
             </button>
           </div>
-        </div>
-      </nav>
 
-      <div className="bg-gray-800 p-7 w-full top-0" />
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-gray-800 p-4">
-          <Link to="/" className="block text-white hover:text-yellow-200 py-2">Home</Link>
-          {/* <Link to="/products" className="block text-white hover:text-yellow-200 py-2">Products</Link> */}
-          <Link to="/awards" className="block text-white hover:text-yellow-200 py-2">Awards</Link>
-          <Link to="/about" className="block text-white hover:text-yellow-200 py-2">About Us</Link>
-        </div>
-      )}
-    </div>
-
+          {isOpen && (
+            <div className="mt-4 grid gap-2 border-t border-[var(--line)] pt-4 md:hidden">
+              {links.map((link) => (
+                <NavLink
+                  key={link.to}
+                  to={link.to}
+                  onClick={() => setIsOpen(false)}
+                  className={({ isActive }) =>
+                    [
+                      'rounded-2xl px-4 py-3 text-sm font-semibold transition',
+                      isActive
+                        ? 'bg-[var(--brand-strong)] text-white'
+                        : 'bg-white/60 text-[var(--text)]',
+                    ].join(' ')
+                  }
+                >
+                  {link.label}
+                </NavLink>
+              ))}
+              <a
+                href="mailto:orwinnoronha@gmail.com"
+                className="rounded-2xl bg-[var(--accent)] px-4 py-3 text-sm font-semibold text-[#3b2b09]"
+              >
+                Contact the team
+              </a>
+            </div>
+          )}
+        </nav>
+      </div>
+    </header>
   );
 };
 

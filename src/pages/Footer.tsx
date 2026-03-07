@@ -1,56 +1,68 @@
-// import React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../resources/logo.png';
+import logo from '../resources/logo.png';
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white p-10">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {/* Logo and Description */}
-        <div>
-          <img src={Logo} alt="MozziQuit Logo" className="mb-4 w-36" />
-          <p>MozziQuit Solutions - Your mosquito control expert.</p>
+    <footer className="mt-20 border-t border-[var(--line)] bg-[#123329] text-white">
+      <div className="shell py-14">
+        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr]">
+          <div className="space-y-5">
+            <div className="flex items-center gap-4">
+              <div className="rounded-2xl bg-white/10 p-3">
+                <img src={logo} alt="MozziQuit" className="h-12 w-auto" />
+              </div>
+              <div>
+                <p className="font-semibold uppercase tracking-[0.3em] text-[#f5d28c]">MozziQuit</p>
+                <p className="text-sm text-white/70">Patented mosquito control for safer homes and communities.</p>
+              </div>
+            </div>
+            <p className="max-w-xl text-sm leading-7 text-white/75">
+              MozziQuit Solutions LLP builds non-chemical mosquito trapping systems designed to reduce disease risk
+              without compromising environmental safety.
+            </p>
+          </div>
+
+          <div className="space-y-3 text-sm text-white/75">
+            <h3 className="text-lg text-white">Visit</h3>
+            <p>
+              Hotel Prithvi Regency Building
+              <br />
+              Door No 1-N-2-183, Ground Floor
+              <br />
+              Opp. Infosys and Dakshina Kannada Panchayat Board
+              <br />
+              Kottara, Ashoknagar Post, Mangalore 575006
+              <br />
+              Karnataka, India
+            </p>
+          </div>
+
+          <div className="space-y-3 text-sm text-white/75">
+            <h3 className="text-lg text-white">Connect</h3>
+            <a href="mailto:orwinnoronha@gmail.com" className="block transition hover:text-[#f5d28c]">
+              orwinnoronha@gmail.com
+            </a>
+            <a href="tel:+919886675656" className="block transition hover:text-[#f5d28c]">
+              +91 9886675656
+            </a>
+            <div className="flex flex-wrap gap-4 pt-2 text-white">
+              <Link to="/" className="transition hover:text-[#f5d28c]">
+                Home
+              </Link>
+              <Link to="/about" className="transition hover:text-[#f5d28c]">
+                About
+              </Link>
+              <Link to="/awards" className="transition hover:text-[#f5d28c]">
+                Awards
+              </Link>
+            </div>
+          </div>
         </div>
 
-        {/* Shop Links */}
-        <div>
-          <h3 className="font-bold mb-3">MozziQuit Solutions LLP</h3>
-          <h3 className="font-normal mb-3">
-              Hotel Prithvi Regency Building,<br />
-              Door No 1-N-2-183, Ground Floor,<br />
-              Opposite Infosys and Dakshina Kannada<br />
-              Panchayat Name Board, Kottara,<br />
-              Ashoknagar Post, Mangalore - 575006,<br />
-              Karnataka, India<br /></h3>
+        <div className="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 text-sm text-white/50 sm:flex-row sm:items-center sm:justify-between">
+          <p>&copy; {new Date().getFullYear()} MozziQuit Solutions LLP. All rights reserved.</p>
+          <p>Built for a cleaner, lower-chemical mosquito defense strategy.</p>
         </div>
-        
-        <div>
-          <h3 className="font-bold mb-3">
-              Email: orwinnoronha@gmail.com<br />
-              Phone: +91 9886675656<br />
-              </h3>
-        </div>
-
-        {/* Information Links */}
-        <div>
-          <h3 className="font-bold mb-3">Information</h3>
-          <ul>
-            <li>
-              <Link to="/about" className="cursor-pointer hover:underline">About Us</Link>
-            </li>
-            <li>
-              <Link to="/awards" className="cursor-pointer hover:underline">Awards</Link>
-            </li>
-            <li>
-              <Link to="/product" className="cursor-pointer hover:underline">Product</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Footer Bottom */}
-      <div className="text-center pt-8 border-t border-gray-700 mt-8">
-        <p>&copy; {new Date().getFullYear()} MozziQuit Solutions LLP. All rights reserved.</p>
       </div>
     </footer>
   );

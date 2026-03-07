@@ -113,6 +113,31 @@ const About = () => {
               ))}
             </div>
           </div>
+<<<<<<< HEAD
+=======
+          <div className="bg-[#ffffff] p-4 mb-0">
+        <div className="flex-row justify-around ">
+          <Card
+            className="max-w-sm mb-4"
+            imgAlt="Meaningful alt text for an image that is not purely decorative"
+            imgSrc={partner1}
+          >
+            <h5 className="text-2xl font-bold tracking-tight text-center text-gray-900 dark:text-white">
+            Ignatius Orwin Noronha
+            </h5>
+            
+          </Card>
+          <Card
+            className="max-w-sm"
+            imgAlt="Meaningful alt text for an image that is not purely decorative"
+            imgSrc={partner}
+          >
+            <h5 className="text-2xl font-bold tracking-tight text-center text-gray-900 dark:text-white">
+            Velagaleti Janaki Venkata Ramana 
+            </h5>
+            
+          </Card>
+>>>>>>> 8fb4dcd3cda702292f7ee29be682452d13cc2ca0
         </div>
       </section>
     </div>

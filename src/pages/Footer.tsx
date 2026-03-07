@@ -59,9 +59,20 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 text-sm text-white/50 sm:flex-row sm:items-center sm:justify-between">
-          <p>&copy; {new Date().getFullYear()} MozziQuit Solutions LLP. All rights reserved.</p>
-          <p>Built for a cleaner, lower-chemical mosquito defense strategy.</p>
+        {/* Information Links */}
+        <div>
+          <h3 className="font-bold mb-3">Information</h3>
+          <ul>
+            <li>
+              <Link to="/about" className="cursor-pointer hover:underline">About Us</Link>
+            </li>
+            <li>
+              <Link to="/awards" className="cursor-pointer hover:underline">Awards</Link>
+            </li>
+            <li>
+              <Link to="/product" className="cursor-pointer hover:underline">Product</Link>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
